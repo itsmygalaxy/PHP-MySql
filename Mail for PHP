@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html>
 <body>
-$email1 = "no-reply@maildomain.com";
-$email = "receiver-email@maildomain.com";
 <?php
+$email1 = "demo@test.com";
+$email = "demo@localhost.com";
 $message="
-<i>Body of the email<i>";
+<i>Body of the email<i><br/>";
 //if you want some conditions you can include it here for example 
 //if (A== B)
-{
-$message .=
-<strong> After the condition, if suits then the mail body will append this to the above message<strong>";
+//{
+$message .="
+<strong> After the condition, if suits then the mail body will append this to the above message<strong><br/><br/>";
 //else
-{
+//{
 $message .="<pre>
-<strong> If the above condition does not match then this line will get appended to the actual message (body of the email)</pre>";
+<strong> If the above condition does not match then this line will get appended to the actual message (body of the email)</pre><br/><br/></strong>
+";
 
 // Always set content-type when sending HTML email
+
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 // More headers
 //$headers .= 'From: $email' . "\r\n";
 //$headers .= 'Cc: demo@localhost.com' . "\r\n";
-mail("$email","SUBJECT of the EMAIL goes here",$message,"From:$email1,$headers");
+mail("$email","SUBJECT of the EMAIL goes here",$message,"From:$email,$headers");
+echo "sending email from $email to $email";
 ?>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
