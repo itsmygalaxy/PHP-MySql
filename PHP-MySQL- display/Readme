@@ -1,0 +1,3 @@
+This will pull the data from the database and display in the tabular format.
+
+Note: Two $result has been provided and one has been commented out, both are working condition. Based on the requirement these can be modified.
