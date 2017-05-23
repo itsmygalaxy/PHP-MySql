@@ -1,0 +1,15 @@
+//This is the first file to collect the values from PHP text boxes.
+
+<html>
+<body>
+<form action="ADD.php" method="POST">
+<?php
+
+echo "ADD new record <br><br>";
+echo'  FirstName: <input type="text" name="firstname" value="" <br><br>';echo "<br/>";
+echo 'LastName: <input type="text" name="lastname" value=""<br><br>';echo "<br/>";
+echo 'NickName: <input type="text" name="nickname" value=""<br><br>';echo "<br/>";
+echo '<input type="Submit" name="ADD" value ="ADD">';
+?>
+</body>
+</html>
