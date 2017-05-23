@@ -6,10 +6,15 @@
 <?php
 
 echo "ADD new record <br><br>";
-echo'  FirstName: <input type="text" name="firstname" value="" <br><br>';echo "<br/>";
-echo 'LastName: <input type="text" name="lastname" value=""<br><br>';echo "<br/>";
-echo 'NickName: <input type="text" name="nickname" value=""<br><br>';echo "<br/>";
+echo'  Sl.No: <input type="text" name="sl_no" value="" <br><br>';echo "<br/>";
+echo 'VPN Name: <input type="text" name="vpnname" value=""<br><br>';echo "<br/>";
+echo 'Site Name: <input type="text" name="sitename" value=""<br><br>';echo "<br/>";
+echo 'Peer Gateway: <input type="text" name="peergw" value=""<br><br>';echo "<br/>";
+echo 'Peer GW IP: <input type="text" name="peergwip" value=""<br><br>';echo "<br/>";
+echo 'LoopBack IP: <input type="text" name="lbackip" value=""<br><br>';echo "<br/>";
+echo 'Primary Site: <input type="text" name="prisite" value=""<br><br>';echo "<br/>";
 echo '<input type="Submit" name="ADD" value ="ADD">';
 ?>
+</form>
 </body>
 </html>
