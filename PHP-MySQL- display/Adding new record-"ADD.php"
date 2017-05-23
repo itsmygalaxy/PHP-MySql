@@ -1,3 +1,5 @@
+//This is the second file to add the values collected from the POST.php file.
+
 <?php
 $hostname="localhost";
 $username="root";
