@@ -2,7 +2,7 @@
 
 <html>
 <body>
-<form action="ADD.php" method="POST">
+<form action="ADD2.php" method="POST">
 <?php
 
 echo "ADD new record <br><br>";
