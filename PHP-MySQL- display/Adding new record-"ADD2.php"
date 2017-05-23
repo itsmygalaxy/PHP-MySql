@@ -12,18 +12,22 @@ or die("Unable to connect to MySQL");
 echo "      Connected to SQL  <br>";
 
 //Declaring Variables
-$firstname = $lastname = $nickname = "";
+$sl_no = $vpnname = $sitename = $peergw = $peergwip = $lbackip = $prisite  = "";
 
-$firstname = mysqli_real_escape_string($con,$_POST["firstname"]);
-$lastname = mysqli_real_escape_string($con,$_POST["lastname"]);
-$nickname = mysqli_real_escape_string($con,$_POST["nickname"]);
+$sl_no = mysqli_real_escape_string($con,$_POST["sl_no"]);
+$vpnname = mysqli_real_escape_string($con,$_POST["vpnname"]);
+$sitename = mysqli_real_escape_string($con,$_POST["sitename"]);
+$peergw = mysqli_real_escape_string($con,$_POST["peergw"]);
+$peergwip = mysqli_real_escape_string($con,$_POST["peergwip"]);
+$lbackip = mysqli_real_escape_string($con,$_POST["lbackip"]);
+$prisite = mysqli_real_escape_string($con,$_POST["prisite"]);
 
 //INSERT values
-$sql= "INSERT INTO <tablename> VALUES ('$firstname','$lastname','$nickname')";
+$sql= "INSERT INTO <tablename> VALUES ('$sl_no','$vpnname','$sitename','$peergw','$peergwip','$lbackip','$prisite')";
 echo "INSERT INTO <tablename> VALUES ('$firstname','$lastname','$nickname')"; //if you want to display what record value added.
 
 
-//$sql= "INSERT INTO <tablename> (FirstName, LastName, NickName) VALUES ('$firstname','$lastname','$nickname')";
+//$sql= "INSERT INTO <tablename> (`Sl.No`, VPN_Name, Site_Name, Peer_Gateway, Peer_GW_IP, LoopBack_IP, Primary_Site) VALUES ('$sl_no','$vpnname','$sitename','$peergw','$peergwip','$lbackip','$prisite')";
 //The above commented line also works, its just an alternative way to add values specifically.
 
 
