@@ -1,3 +1,20 @@
 This will pull the data from the database and display in the tabular format.
-
 Note: Two $result has been provided and one has been commented out, both are working condition. Based on the requirement these can be modified.
+
+
+Thinking you already have table :
+
+
+Table Creation:
+CREATE TABLE `<tablename>` ( 
+  `Sl.No` int(3),
+  `VPN Name` text,
+  `Site_Name` text,
+  `Peer_Gateway` text,
+  `Peer_GW_IP` text,
+  `LoopBack_IP` text,
+  `Primary_Site` text,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='<comment name>';
+
+Example:
+INSERT INTO `<tablename>` VALUES ("1","data1","data2","data3","data4","data5","data6");
