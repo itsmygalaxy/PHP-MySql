@@ -1,0 +1,36 @@
+<?php
+$hostname="localhost";
+$username="root";
+$password="";
+$database="dbname";
+
+//connection to the database
+$con = mysqli_connect($hostname, $username,"",$database)
+or die("Unable to connect to MySQL");
+echo "      Connected to SQL  <br>";
+
+//Declaring Variables
+$firstname = $lastname = $nickname = "";
+
+$firstname = mysqli_real_escape_string($con,$_POST["firstname"]);
+$lastname = mysqli_real_escape_string($con,$_POST["lastname"]);
+$nickname = mysqli_real_escape_string($con,$_POST["nickname"]);
+
+//INSERT values
+$sql= "INSERT INTO <tablename> VALUES ('$firstname','$lastname','$nickname')";
+echo "INSERT INTO <tablename> VALUES ('$firstname','$lastname','$nickname')"; //if you want to display what record value added.
+
+
+//$sql= "INSERT INTO <tablename> (FirstName, LastName, NickName) VALUES ('$firstname','$lastname','$nickname')";
+//The above commented line also works, its just an alternative way to add values specifically.
+
+
+//ERROR checking
+if (!mysqli_query($con,$sql)) {
+  die('Error: ' . mysqli_error($con));
+}
+echo "1 record added";
+
+//closing the connection.
+mysqli_close($con);
+?>
