@@ -1,0 +1,12 @@
+<html>
+<body>
+<form action="DEL2.php" method="POST">
+<?php
+
+echo "Delete existing record <br><br>";
+echo'  FirstName: <input type="text" name="firstname" value="" <br><br>';echo "<br/>";
+echo '<input type="Submit" name="Delete" value ="DELETE">';
+?>
+</form>
+</body>
+</html>
